@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component, useState} from "react";
+import Page from "./front_end/Page/Page";
+import{
+  Jumbotron,
+} from "reactstrap";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Page fluid="false">
+                <Jumbotron>
+                    <h1 className="display-3">Aquahelp</h1>
+                    <p className="lead">
+                        Welcome to Aqauhelp, this is a tool to help City of London Aquatics Staff.
+                        This site displays pool schedules and aids with camp bookings.
+                    </p>
+                </Jumbotron>
+            </Page>
   );
 }
 
