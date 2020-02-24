@@ -19,7 +19,10 @@ class Pools extends Component{
         return(
             <Page>
                 <Jumbotron>
-                    <p>Pool page</p>
+                    <h3>City of London Pools</h3>
+                    <p className="lead">This page displays City of london pools.
+                         Also notifies for closures               
+                    </p>
                 </Jumbotron>
                 <Card>
                     <IndoorPools/>

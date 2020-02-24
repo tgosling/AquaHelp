@@ -1,4 +1,3 @@
-import Page from "../Page/Page";
 import React, { Component } from "react";
 import {
     Card, CardImg, CardText, CardBody, CardLink,
@@ -8,13 +7,15 @@ import {
 const IndoorPool = (props) => {
     let {pool} = props;
     //let {photo, title, address, schedule, book} = pool;
-    let {title, phone, address} = pool;
+    let {title, phone, address, photo} = pool;
     return(
         <React.Fragment>
             <Card style={{ marginTop: "2%"}}>
+            <CardImg top width="100%" src={photo} alt={title}/>
                 <CardBody>
                     <CardTitle>{title}</CardTitle>
                     <CardSubtitle>{phone}</CardSubtitle>
+                  
                     <CardText>{address}</CardText>
                 </CardBody>       
                 <CardBody>
