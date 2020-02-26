@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import {
     Card, CardImg, CardText, CardBody, CardLink,
-    CardTitle, CardSubtitle, Button, Modal, ModalHeader, ModalBody, ModalFooter
+    CardTitle, CardSubtitle, Button, Nav, NavLink, NavItem,
+    Modal, ModalHeader, ModalBody, ModalFooter
 } from 'reactstrap';
 import ScheduleModal from "../Modals/ScheduleModal";
 
@@ -27,6 +28,17 @@ const IndoorPool = (props) => {
                 <CardBody>
                 <Button href="#" onClick={toggle} style={{marginRight: "2%"}}>View Schedule</Button>
                 <Modal isOpen={modal} toggle={toggle}>
+                    <Nav tabs>
+                        <NavItem>
+                            <NavLink>Rec Swim</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink>Lane Swim</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink>Aquafit</NavLink>
+                        </NavItem>
+                    </Nav>
                     <ModalHeader toggle={toggle}>{title}</ModalHeader>
                     <ModalBody>
                         Pool Schedule
