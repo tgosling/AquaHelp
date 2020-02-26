@@ -1,40 +1,54 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody, 
-    ModalFooter, Nav, NavLink, NavItem } from "reactstrap";
+    ModalFooter, Nav, NavLink, NavItem, TabContent, TabPane } from "reactstrap";
+import classnames from 'classnames';
 
-class ScheduleModal extends Component {
-  constructor(props) {
-    super(props);
-  }
+const ScheduleModal = (props) => {
+    const [activeTab, setActiveTab] = useState('1');
 
-  render() {
+    const toggle = tab => {
+        if(activeTab !== tab) setActiveTab(tab);
+    }
+
     return (
       <Modal
-        isOpen={this.props.open}
-        toggle={this.props.toggle}
-        className={this.props.className}
+        isOpen={props.open}
+        toggle={props.toggle}
+        className={props.className}
       >
-        <ModalHeader toggle={this.props.toggle}>{this.props.title}</ModalHeader>
+        <ModalHeader toggle={props.toggle}>{props.title}</ModalHeader>
         <Nav tabs>
           <NavItem>
-            <NavLink>Rec Swim</NavLink>
+            <NavLink className={classnames({active: activeTab === '1'})}
+                     onClick={() =>{toggle('1');}}>Rec Swim</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink>Lane Swim</NavLink>
+            <NavLink className={classnames({active: activeTab === '2'})}
+                     onClick={() =>{toggle('2');}}>Lane Swim</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink>Aquafit</NavLink>
+            <NavLink className={classnames({active: activeTab === '3'})}
+                     onClick={() =>{toggle('3');}}>Aquafit</NavLink>
           </NavItem>
         </Nav>
-        <ModalBody>Pool Schedule</ModalBody>
+        <TabContent activeTab={activeTab}>
+            <TabPane tabId="1">
+                <ModalBody>Rec Swim Schedule</ModalBody>
+            </TabPane>
+            <TabPane tabId="2">
+                <ModalBody>Lane Swim Schedule</ModalBody>
+            </TabPane>
+            <TabPane tabId="3">
+                <ModalBody>Aquafit Schedule</ModalBody>
+            </TabPane>            
+        </TabContent>
         <ModalFooter>
-          <Button color="primary" onClick={this.props.toggle}>
+          <Button color="primary" onClick={props.toggle}>
             Close
           </Button>
         </ModalFooter>
       </Modal>
     );
-  }
 }
 
 export default ScheduleModal;

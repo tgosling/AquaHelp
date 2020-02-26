@@ -26,6 +26,7 @@ const IndoorPool = (props) => {
                 </CardBody>       
                 <CardBody>
                 <Button href="#" onClick={toggle} style={{marginRight: "2%"}}>View Schedule</Button>
+                <ScheduleModal title={title} open={modal} toggle={toggle}></ScheduleModal>
                 <Button href="#">Book Camp</Button>
                     </CardBody>      
             </Card>
