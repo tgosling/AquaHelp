@@ -28,7 +28,7 @@ const Navbar = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <BootstrapNavbar color="dark" dark expand="md">
+    <BootstrapNavbar color="info" dark expand="md">
       <NavbarBrand href="/">City of London Aquatics</NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
