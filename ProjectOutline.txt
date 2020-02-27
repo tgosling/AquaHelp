@@ -1,0 +1,38 @@
+AquaHelp
+
+Src/Front_end/
+./Home
+  ->Home.js
+    -Display page for home content
+./Page
+  ->Navbar.js
+    -routing for site 
+     (?)how to properly route to new pages
+  ->Page.js
+    -Initial display for all webpages
+./Pools
+(?)Where to put pool JSON data
+   -
+(?)how to pull from node.js
+  ->IndoorPool.js
+    -Indoor Pool display component model
+  ->IndoorPools.js
+    -Displays all Indoor pools
+  ->OutdoorPool.js
+    -Outdoor pool display component model
+  ->Pools.js
+    -Shows all pools
+
+src/
+->index.js
+  -reactDom.render() of Home
+
+//TODO
+->Proper Routing
+  -Routing pages from navbar
+->Modals from button clicks
+  -Schedule Modal
+   >Tabs for Rec Swim, Lane Swim, Aquafit
+  -Book Camp Modal
+   >Input Form
+->Cashier tips

@@ -1,65 +1,52 @@
-import React, {Component} from "react";
+import React, { useState } from "react";
 import {
-    Collapse,
-    Navbar as BootstrapNavbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
-  } from "reactstrap";
+  Collapse,
+  Navbar as BootstrapNavbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink
+} from "reactstrap";
 
-  const items = [
-      {name: "Home",
-       path: "/",
-       dropdown: false
-       //image: "/img/img.png"
-    },
-    {
-        name: "Pools",
-        path: "/Pools"
-        //image: "/img/img.png"
-    }
-  ];
+const items = [
+  {
+    name: "Home",
+    path: "/",
+    dropdown: false
+    //image: "/img/img.png"
+  },
+  {
+    name: "Pools",
+    path: "/Pools"
+    //image: "/img/img.png"
+  }
+];
 
-  class Navbar extends Component {
-      constructor(props){
-          super(props);
+const Navbar = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
 
-          this.state ={
-              isOpen: false
-          };
-      }
+  return (
+    <BootstrapNavbar color="dark" dark expand="md">
+      <NavbarBrand href="/">City of London Aquatics</NavbarBrand>
+      <NavbarToggler onClick={toggle} />
+      <Collapse isOpen={isOpen} navbar>
+        <Nav className="ml-auto" navbar>
+          <NavItem>
+            <NavLink href="/">Home</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/pools">Pools</NavLink>
+          </NavItem>
+          <NavItem>
+              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+            </NavItem>
+        </Nav>
+      </Collapse>
+    </BootstrapNavbar>
+  );
+}; //end Navbar
 
-      toggleNavBar = () =>{
-          this.setState({
-              isOpen: !this.state.isOpen
-          });
-      };
-
-      render() {
-        return (
-          <BootstrapNavbar color="dark" dark expand="md">
-              <NavbarBrand href="/">City of London Aquatics</NavbarBrand>
-              <NavbarToggler onClick={this.toggle}/>
-              <Collapse isOpen={this.state.isOpen} navbar>
-                  <Nav className="ml-auto" navbar>
-                    <NavItem>
-                        <NavLink href="/">Home</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/pools">Pools</NavLink>
-                    </NavItem>
-                  </Nav>
-              </Collapse>
-          </BootstrapNavbar>
-        );
-    }
-  }//end Navbar
-
-  export const navItems = items;
-  export default Navbar;
+export const navItems = items;
+export default Navbar;

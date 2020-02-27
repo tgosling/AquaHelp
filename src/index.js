@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
 import Pools from "./front_end/Pools/Pools";
+//import Home from "./front_end/Home/Home";
 
 ReactDOM.render(<Pools />, document.getElementById('root'));
 
