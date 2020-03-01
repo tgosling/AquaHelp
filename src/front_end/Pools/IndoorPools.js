@@ -46,14 +46,14 @@ const IndoorPools = () => {
     return(
         <React.Fragment>
         <h3>Indoor Pools</h3>
-            <CardDeck>
-               
+            <CardDeck>        
                 {pools.map((pool, idx) => (                  
                         <IndoorPool pool={pool}/>
                 ))}
             </CardDeck>
             </React.Fragment>
     )
-}
+}//end IndoorPools
 
+export const indPools = pools;
 export default IndoorPools;
