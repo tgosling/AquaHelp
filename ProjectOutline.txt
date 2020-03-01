@@ -32,7 +32,19 @@ src/
   -Routing pages from navbar
 ->Modals from button clicks
   -Schedule Modal
-   >Tabs for Rec Swim, Lane Swim, Aquafit
-  -Book Camp Modal
-   >Input Form
+   >Tabs for Rec Swim, Lane Swim, Aquafit**
+   >Import Schedule times
+   >Display Schedule format 
+->View on Map Button
+  -Modal to show Googlemaps location
 ->Cashier tips
+->Camp Booking
+  -auto populate pool from button click
+  -react date-picker
+  -book camps for multiple days
+  -Camp Bookings Main 
+   >Book Camp
+   >Availabilities
+    -Progress Bar for pool availability
+   >Multi-Book
+  
