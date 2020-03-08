@@ -5,9 +5,10 @@ import {Card, CardDeck} from 'reactstrap';
 const pools = [
     {
       photo: "https://www.aquaplans.com/userContent/media-collections/DC943785-B016-D01F-4F68-DC679D771A90/20190710-115345-20190622_092850~31.jpg",
-      title: "Byron Pool",
+      title: "Byron",
       address: "1308 Norman Ave",
       phone: "(519) 661-4405",
+      level: "4",
       schedule: () => {
         console.log("Schedule");
       },
@@ -20,6 +21,7 @@ const pools = [
       title: "Gibbons",
       address: "2 Grosvernor St",
       phone: "(519) 661-4407",
+      level: "3",
       schedule: () => {
         console.log("Schedule");
       },
@@ -32,6 +34,7 @@ const pools = [
       title: "Glen Cairn",
       address: "370 Chippendale Cres",
       phone: "(519) 661-4408",
+      level: "2",
       schedule: () => {
         console.log("Schedule");
       },
@@ -44,6 +47,7 @@ const pools = [
       title: "North East",
       address: "1050 Victoria Dr",
       phone: "(519) 661-4409",
+      level: "3",
       schedule: () => {
         console.log("Schedule");
       },
@@ -56,6 +60,7 @@ const pools = [
       title: "Northridge",
       address: "15 McLean Dr",
       phone: "(519) 661-4412",
+      level: "4",
       schedule: () => {
         console.log("Schedule");
       },
@@ -68,6 +73,7 @@ const pools = [
       title: "Oakridge",
       address: "825 Valetta St",
       phone: "(519) 661-4424",
+      level: "2",
       schedule: () => {
         console.log("Schedule");
       },
@@ -80,6 +86,7 @@ const pools = [
       title: "Silverwood",
       address: "36 Sycamore St",
       phone: "(519) 661-4413",
+      level: "2",
       schedule: () => {
         console.log("Schedule");
       },
@@ -92,6 +99,7 @@ const pools = [
       title: "Southcrest",
       address: "10 Hazelwood Ave",
       phone: "(519) 661-4415",
+      level: "4",
       schedule: () => {
         console.log("Schedule");
       },
@@ -104,6 +112,7 @@ const pools = [
       title: "Stronach",
       address: "1221 Sandford St",
       phone: "(519) 661-4416",
+      level: "4",
       schedule: () => {
         console.log("Schedule");
       },
@@ -116,6 +125,7 @@ const pools = [
       title: "Thames",
       address: "15 Ridout St",
       phone: "(519) 661-4417",
+      level: "1",
       schedule: () => {
         console.log("Schedule");
       },
@@ -128,6 +138,7 @@ const pools = [
       title: "Westminister",
       address: "650 Osgoode Dr",
       phone: "(519) 661-4418",
+      level: "4",
       schedule: () => {
         console.log("Schedule");
       },

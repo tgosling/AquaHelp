@@ -9,6 +9,7 @@ const pools = [
       title: "Canada Games Aqautic Center",
       address: "1045 Wonderland Rd North",
       phone: "(519) 661-4455",
+      level: "1",
       schedule: () => {
         console.log("Schedule");
       },
@@ -21,6 +22,7 @@ const pools = [
       title: "Carling Heights Optimist Community Center",
       address: "656 Elizabeth St",
       phone: "(519) 661-2523",
+      level: "3",
       schedule: () => {
         console.log("Schedule");
       },
@@ -33,6 +35,7 @@ const pools = [
       title: "South London Community Pool",
       address: "585 Bradley Ave",
       phone: "(519) 661-0920",
+      level: "3",
       schedule: () => {
         console.log("Schedule");
       },

@@ -41,6 +41,9 @@ const Navbar = (props) => {
             <NavLink href="/pools">Pools</NavLink>
           </NavItem>
           <NavItem>
+            <NavLink href="/Camps">Camps</NavLink>
+          </NavItem>
+          <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
             </NavItem>
         </Nav>
