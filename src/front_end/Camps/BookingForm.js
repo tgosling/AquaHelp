@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Page from '../Page/Page';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import {
     Button, Form, FormGroup, FormText,
     Label, Input, Jumbotron, Col, Option
 } from 'reactstrap';
 
 const BookingForm = (props) => {
+    const [startDate, setStartDate] = useState(null);
     return (
         <Page>
         <Jumbotron>
@@ -21,7 +24,7 @@ const BookingForm = (props) => {
             <FormGroup row>
                 <Label for="councName" sm={2}>Councillor Name:</Label>
                 <Col sm={10}>
-                    <Input type="" name="councillor" id="councName" placeholder="Enter Councillor Name..."/>
+                    <Input type="" name="campCounc" id="councName" placeholder="Enter Councillor Name..."/>
                 </Col>
             </FormGroup>
             <FormGroup row>
@@ -40,9 +43,16 @@ const BookingForm = (props) => {
                 </Input> 
                 </Col>
             </FormGroup>
-                {/*React 
-                   datepicker
-                   goes here*/}
+            <FormGroup row>
+                <Label for="date" sm={2}>Date:</Label>
+                <Col sm={10}>
+                <DatePicker  
+                    selected={startDate}
+                    onChange={date => setStartDate(date)}
+                    minDate={new Date()}
+                    placeholderText="Select a date to book swim"/>
+                </Col>
+            </FormGroup>
             <FormGroup row>
                 <Label for="campers" sm={2}>Number of Campers:</Label>
                 <Col sm={10}>

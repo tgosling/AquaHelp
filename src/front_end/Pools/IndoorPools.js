@@ -1,7 +1,7 @@
 import React from "react";
 import Page from "../Page/Page";
 import IndoorPool from "./IndoorPool";
-import {Card, CardDeck} from 'reactstrap';
+import {CardDeck} from 'reactstrap';
 
 const pools = [
     {

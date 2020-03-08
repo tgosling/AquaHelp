@@ -27,6 +27,7 @@ const Navbar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
+
   return (
     <BootstrapNavbar color="info" dark expand="md">
       <NavbarBrand href="/">City of London Aquatics</NavbarBrand>
