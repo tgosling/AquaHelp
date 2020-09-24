@@ -1,5 +1,8 @@
 Button{
     margin: 1%;
     width: 100%;
-   
+}
+
+.jumbotron{
+    color: "blue";
 }

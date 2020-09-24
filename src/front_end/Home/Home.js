@@ -20,7 +20,7 @@ class Home extends Component {
     return (
       <Page>
         <Jumbotron>
-          <h1 className="display-3">AquaHelp</h1>
+          <h1 className="display-3" style={{color: "blue"}}>AquaHelp</h1>
           <p className="lead">
             Welcome to AqauHelp, this is a tool to help City of London Aquatics
             Staff. This site displays pool schedules and aids with camp
