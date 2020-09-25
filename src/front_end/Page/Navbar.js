@@ -6,27 +6,14 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
 } from "reactstrap";
-
-const items = [
-  {
-    name: "Home",
-    path: "/",
-    dropdown: false
-    //image: "/img/img.png"
-  },
-  {
-    name: "Pools",
-    path: "/Pools"
-    //image: "/img/img.png"
-  }
-];
+import { Link } from "react-router-dom";
+import {routes} from '../../App'
 
 const Navbar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-
 
   return (
     <BootstrapNavbar color="info" dark expand="md">
@@ -34,23 +21,22 @@ const Navbar = (props) => {
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
-          <NavItem>
-            <NavLink href="/">Home</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/pools">Pools</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/Camps">Camps</NavLink>
-          </NavItem>
-          <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+          {routes.map((route) => (
+            <NavItem key={route.path}>
+              <NavLink tag={Link} to={route.path}>
+                {route.text}
+              </NavLink>
             </NavItem>
+          ))}
+          <NavItem>
+            <NavLink href="https://github.com/tgosling/AquaHelp">
+              GitHub
+            </NavLink>
+          </NavItem>
         </Nav>
       </Collapse>
     </BootstrapNavbar>
   );
 }; //end Navbar
 
-export const navItems = items;
 export default Navbar;

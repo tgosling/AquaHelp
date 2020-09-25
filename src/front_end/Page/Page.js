@@ -12,7 +12,6 @@ class ModuleLoader extends Component {
     render(){
         return (
             <React.Fragment>
-                <Navbar/>
                 <Container style={{ marginBottom: 25, marginTop: 10 }} fluid={this.props.fluid}>
                  {this.props.children}
                 </Container>
